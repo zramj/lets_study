@@ -21,6 +21,10 @@
     <!-- JQuery 3.6.4 -->
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="module" src="/src/js/main.js" defer></script>
+
+    <!-- Crypto -->
+    <script src="/node_modules/crypto-js/crypto-js.js"></script>
+    <script type="module" src="/src/js/pw-encryption.js" defer></script>
    
     <link rel="stylesheet" href="/src/css/main.css">
 
@@ -249,7 +253,7 @@
                         </div>
                         <div class="mb-3 ">
                             <label for="passwordInput" class="form-label">請輸入您的密碼</label>
-                            <input type="password" class="form-control" id="passwordInput" placeholder="" required>
+                            <input type="password" class="form-control" id="passwordInput" autocomplete="current-password" placeholder="" required>
                         </div>
                         <div class="text-center mb-3">
                             <button type="submit" class="btn btn-default">登入</button>
