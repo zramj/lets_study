@@ -20,7 +20,12 @@
    
     <!-- JQuery 3.6.4 -->
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="module" src="/src/js/main.js" defer></script>
+
+    <!-- JQuery Validate -->
+    <script src="/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>   
+    <script type="module" src="/src/js/form-validate.js" defer></script>
+
+    <script type="module" src="/src/js/main.js" defer></script> 
 
     <link rel="stylesheet" href="/src/css/main.css">
     
@@ -66,7 +71,7 @@
     <div class="container-xxl main-wrap">
         <div class="sm-wrap pb-5">
             <div class="main-title">註冊</div>
-            <form action="signup-success.html" >
+            <form action="signup-success.html" id="signup-form">
                 <div class="mb-3">
                     <label for="signUpEmailInput" class="form-label">註冊信箱</label>
                     <input type="email" class="form-control" id="signUpEmailInput" placeholder="" required>
