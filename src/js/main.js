@@ -1,6 +1,6 @@
 $(function() {
   //篩選項目添加‘active’狀態
-  $('.topic-nav-wrap a').on("click", function() {
+  $('.topic-nav-wrap a').on("click", function(event) {
       event.preventDefault();
       $('.topic-nav-wrap a').removeClass('tag-active');
       $(this).addClass('tag-active');
