@@ -426,4 +426,8 @@ footer {
     .uploadImg-wrap .uploadImg-text .fa-camera {
       font-size: 3.5em; }
 
+.registration-wrap {
+  max-width: 800px;
+  margin: auto; }
+
 /*# sourceMappingURL=main.css.map */
