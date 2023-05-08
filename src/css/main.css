@@ -398,7 +398,7 @@ footer {
       margin: 0.5em 0.735em; }
 
 .am-wrap {
-  max-width: 1100px;
+  max-width: 800px;
   margin: auto; }
 
 .filepond--credits {
@@ -425,9 +425,5 @@ footer {
     line-height: 2em; }
     .uploadImg-wrap .uploadImg-text .fa-camera {
       font-size: 3.5em; }
-
-.registration-wrap {
-  max-width: 800px;
-  margin: auto; }
 
 /*# sourceMappingURL=main.css.map */
