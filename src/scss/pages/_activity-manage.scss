@@ -1,0 +1,38 @@
+// "am-" 為 activity-manage 前綴詞 
+.am-wrap {
+    max-width: 1100px;
+    margin: auto;
+}
+.filepond--credits {
+    display: none;
+}
+.uploadImg-wrap {
+    border: 1px dashed $main-color;
+    border-radius: 1em;
+    padding: 1em;
+    position: relative;
+    height: 220px;
+
+    .filepond--root {
+        height: 100%;
+    }
+    .filepond--panel-root {
+        background-color: transparent;
+    }
+
+    .uploadImg-text {
+        position: absolute;
+        // z-index: 1;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: auto;
+        padding-top: 4em;
+        color: $main-color;
+        line-height: 2em;
+        .fa-camera {
+            font-size: 3.5em;
+        }
+    }
+
+}

@@ -1,3 +1,5 @@
+//TODO: 欄位驗證還沒做
+
 $(function(){
     $('#form').validate({
         /* 常用檢測屬性
