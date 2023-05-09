@@ -36,3 +36,95 @@
     }
 
 }
+.myAm-box {
+    margin: 0;
+    align-items: start;
+}
+.am-nav {
+    background-color: #eee;
+    border-radius: $border-radius;
+    padding: 1em;
+    flex-direction: row;
+    .nav-link {
+        color: $main-color;
+        .fa-caret-right {
+            margin-right: 0.5em;
+            color: transparent;
+        }
+        &.active {
+            color: $dark-text-color;
+            background-color: transparent;
+            cursor: default;
+            .fa-caret-right {
+                color: $dark-text-color;
+            }
+        }
+    }
+}
+.am-container {
+    margin-top: 2em;
+    .nav {
+        border-bottom: 1px solid $border-bottom-color;
+        .nav-item {
+            width: 20%;
+        }
+        .nav-link {
+            width: 100%;
+            color: $main-color;
+            &.active {
+                font-weight: normal;
+                color: $dark-text-color;
+                border-bottom-color: $main-color;
+            }
+        }
+    }
+}
+.am-content {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-card;
+    background-color: $light-text-color;
+    .am-title {
+        display: flex;
+        align-items: center;
+        padding: 0.3em;
+        font-size: 1.1em;
+        background-color: $main-color-light;
+        color: $light-text-color;
+        border-top-right-radius: $border-radius;
+        border-top-left-radius: $border-radius;
+        .btn {
+            color: $light-text-color;
+        }
+    }
+    .am-info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 1em;
+        & > div {
+            display: flex;
+        }
+        label {
+            margin-right: 0.5em;
+            font-weight: bold;
+        }
+        .date-info, .peopleNumber-info {
+            color: $main-color;
+        }
+        .joined-number {
+            font-size: 1.2em;
+            color: $dark-text-color;
+            margin-right: 2px;
+        }
+    }
+}
+@media (min-width: 576px) {
+    .am-nav {
+        flex-direction: column;
+    }
+    .am-container {
+        padding-left: 3em;
+        padding-right: 0;
+        margin-top: 0;
+    }
+}

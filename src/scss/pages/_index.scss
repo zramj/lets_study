@@ -4,7 +4,7 @@
     .topic-tag {
         height: 30px;
         width: auto;
-        border-radius: 5px;
+        border-radius: $border-radius;
         background-color: #eee;
         h1 {
             font-size: 0.8em;
@@ -63,9 +63,9 @@
             width: 80%;
             background-color: #fff;
             padding: 1em;
-            border-radius: 5px;
+            border-radius: $border-radius;
             position: relative;
-            box-shadow: 1px 1px 1px 1px #eee;
+            box-shadow: $box-shadow-card;
             z-index: 1;
             transition: all .15s ease-in-out;
             a {
