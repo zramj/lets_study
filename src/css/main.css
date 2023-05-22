@@ -434,6 +434,7 @@ footer {
   background-color: #eee;
   border-radius: 5px;
   padding: 1em;
+  display: flex;
   flex-direction: row; }
   .am-nav .nav-link {
     color: #35647e; }
@@ -460,6 +461,8 @@ footer {
         font-weight: normal;
         color: #1E252B;
         border-bottom-color: #35647e; }
+  .am-container .main-card li {
+    justify-content: center; }
 
 .am-content {
   border-radius: 5px;
@@ -493,9 +496,23 @@ footer {
       color: #1E252B;
       margin-right: 2px; }
 
-@media (min-width: 576px) {
+.memberInfo-wrap {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+  .memberInfo-wrap .member-avatar {
+    text-align: center;
+    font-size: 16px; }
+    .memberInfo-wrap .member-avatar .member-name {
+      margin: 1rem 0; }
+  .memberInfo-wrap .memberInfo-txt {
+    margin: 0.5rem 0 1.5rem;
+    color: #666; }
+
+@media (min-width: 768px) {
   .am-nav {
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: baseline; }
 
   .am-container {
     padding-left: 3em;

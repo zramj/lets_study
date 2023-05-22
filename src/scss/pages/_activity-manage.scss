@@ -44,6 +44,7 @@
     background-color: #eee;
     border-radius: $border-radius;
     padding: 1em;
+    display: flex;
     flex-direction: row;
     .nav-link {
         color: $main-color;
@@ -78,6 +79,12 @@
             }
         }
     }
+    .main-card {
+        li {
+            justify-content: center;
+        }
+    }
+
 }
 .am-content {
     border-radius: $border-radius;
@@ -118,9 +125,29 @@
         }
     }
 }
-@media (min-width: 576px) {
+
+.memberInfo-wrap {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .member-avatar {
+        text-align: center;
+        font-size: 16px;
+        .member-name {
+            margin: 1rem 0;
+        }
+    }
+    .memberInfo-txt {
+        margin: 0.5rem 0 1.5rem;
+        color: $ad-text-color;
+    }
+}
+
+
+@media (min-width: 768px) {
     .am-nav {
         flex-direction: column;
+        align-items: baseline;
     }
     .am-container {
         padding-left: 3em;

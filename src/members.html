@@ -69,12 +69,23 @@
         </div>
     </header>
     <div class="container-xxl main-wrap">
-        <div class="am-wrap pb-3">
-            <div class="main-title">我的活動管理</div>
+        <div class="">
             <div class="row myAm-box">
-                <div class="nav nav-pills am-nav col-md-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <button class="nav-link active" id="v-pills-join-tab" data-bs-toggle="pill" data-bs-target="#v-pills-join" type="button" role="tab" aria-controls="v-pills-join" aria-selected="true"><i class="fa-solid fa-caret-right"></i>我參加的活動</button>
-                    <button class="nav-link" id="v-pills-initiate-tab" data-bs-toggle="pill" data-bs-target="#v-pills-initiate" type="button" role="tab" aria-controls="v-pills-initiate" aria-selected="false"><i class="fa-solid fa-caret-right"></i>我發起的活動</button>
+                <div class="nav nav-pill col-md-3 memberInfo-wrap" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="member-avatar">
+                        <div class="member-photo">
+                            <img src="/src/img/default-avatar.png" alt="">
+                        </div>
+                        <div class="member-name">高山峰</div>
+                    </div>
+                    <div class="memberInfo-txt">
+                        是個愛漂流四方的人 <br>
+                        是個讀千萬卷書的人
+                    </div>
+                    <div class="am-nav">
+                        <button class="nav-link active" id="v-pills-join-tab" data-bs-toggle="pill" data-bs-target="#v-pills-join" type="button" role="tab" aria-controls="v-pills-join" aria-selected="true"><i class="fa-solid fa-caret-right"></i>我參加的活動</button>
+                        <button class="nav-link" id="v-pills-initiate-tab" data-bs-toggle="pill" data-bs-target="#v-pills-initiate" type="button" role="tab" aria-controls="v-pills-initiate" aria-selected="false"><i class="fa-solid fa-caret-right"></i>我發起的活動</button>
+                    </div>
                 </div>
                 <div class="tab-content am-container col-md-9" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-join" role="tabpanel" aria-labelledby="v-pills-join-tab" tabindex="0">
@@ -91,76 +102,55 @@
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="join-notStart" role="tabpanel" aria-labelledby="join-notStart-tab" tabindex="0">
-                                <ul class="am-list">
-                                    <li class="am-item">
-                                        <div class="am-content">
-                                            <div class="am-title">
-                                                <span class="me-auto">《深度學習的技術》讀書會</span>
-                                                <button class="btn btn-sm"><i class="fa-solid fa-eye"></i></button>
+                                <div class="main-card">
+                                    <ul class="">
+                                        <li data-topic-tag="art">
+                                            <div class="topic-tag-icon tag-art">藝文</div>
+                                            <div class="card-content">
+                                                <a href="activity-detail.html">
+                                                    <div class="title">伊勢英子繪本原畫展-<生命的形式>紀錄電影放映</div>
+                                                    <div class="intro-content">灰灰基地美術館11月～2月展覽。 日本知名插畫家伊勢英子原畫展與紀錄電影 < 生...</div>
+                                                    <div class="dateTime-content"><i class="fa-solid fa-calendar-days"></i> 2021-03-05(五) 10:00 ~ 2021-04-20(二) 18:00 </div>
+                                                    <div class="location-content"><i class="fa-solid fa-location-dot"></i> 高雄市新興區民有街84,86號 ((近高雄捷運中央公園站))</div>                                
+                                                </a>
                                             </div>
-                                            <div class="am-info">
-                                                <div>
-                                                    <label for="">活動時間</label>
-                                                    <div class="date-info">2021/04/01 ~ 2021/04/30</div>
-                                                </div>
-                                                <div>
-                                                    <label for="">報名人數</label>
-                                                    <div class="peopleNumber-info">
-                                                        <span class="joined-number">1</span>/10
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>    
                             </div>
                             <div class="tab-pane fade" id="join-started" role="tabpanel" aria-labelledby="join-started-tab" tabindex="0">
-                                <ul class="am-list">
-                                    <li class="am-item">
-                                        <div class="am-content">
-                                            <div class="am-title">
-                                                <span class="me-auto">《深度學習的技術》讀書會</span>
-                                                <button class="btn btn-sm"><i class="fa-solid fa-eye"></i></button>
+                                <div class="main-card">
+                                    <ul class="">
+                                        <li data-topic-tag="language">
+                                            <div class="topic-tag-icon tag-language">語言</div>
+                                            <div class="card-content">
+                                                <a href="">
+                                                    <div class="title">英文口說讀書會</div>
+                                                    <div class="intro-content">全程英文，無需刻意準備，不拘束，輕鬆進行。第一小時閒聊；第二小時採主題進行...</div>
+                                                    <div class="dateTime-content"><i class="fa-solid fa-calendar-days"></i> 2021-03-05(五)  ~ 2021-04-20(二) </div>
+                                                    <div class="location-content"><i class="fa-solid fa-location-dot"></i> 中壢區，光南附近的摩斯漢堡。</div>                                
+                                                </a>
                                             </div>
-                                            <div class="am-info">
-                                                <div>
-                                                    <label for="">活動時間</label>
-                                                    <div class="date-info">2021/04/01 ~ 2021/04/30</div>
-                                                </div>
-                                                <div>
-                                                    <label for="">報名人數</label>
-                                                    <div class="peopleNumber-info">
-                                                        <span class="joined-number">1</span>/10
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div> 
                             </div>
                             <div class="tab-pane fade" id="join-over" role="tabpanel" aria-labelledby="join-over-tab" tabindex="0">
-                                <ul class="am-list">
-                                    <li class="am-item">
-                                        <div class="am-content">
-                                            <div class="am-title">
-                                                <span class="me-auto">《深度學習的技術》讀書會</span>
-                                                <button class="btn btn-sm"><i class="fa-solid fa-eye"></i></button>
+                                <div class="main-card">
+                                    <ul class="">
+                                        <li data-topic-tag="book">
+                                            <div class="topic-tag-icon tag-book">書籍</div>
+                                            <div class="card-content">
+                                                <a href="">
+                                                    <div class="title">《深度學習的技術》讀書會</div>
+                                                    <div class="intro-content">我們讀書會已成立一年囉，運作良好，成員們也都很好相處，這是去年 2017 Reading…</div>
+                                                    <div class="dateTime-content"><i class="fa-solid fa-calendar-days"></i> 2021/04/30(五) 19:30 </div>
+                                                    <div class="location-content"><i class="fa-solid fa-location-dot"></i> 伯朗南京一店（台北市中山區南京東路二段218號，建國南京交叉路口）</div>                                
+                                                </a>
                                             </div>
-                                            <div class="am-info">
-                                                <div>
-                                                    <label for="">活動時間</label>
-                                                    <div class="date-info">2021/04/01 ~ 2021/04/30</div>
-                                                </div>
-                                                <div>
-                                                    <label for="">報名人數</label>
-                                                    <div class="peopleNumber-info">
-                                                        <span class="joined-number">1</span>/10
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div> 
                             </div>
                         </div>
                     </div>
@@ -178,79 +168,55 @@
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="initiate-notStart" role="tabpanel" aria-labelledby="initiate-notStart-tab" tabindex="0">
-                                <ul class="am-list">
-                                    <li class="am-item">
-                                        <div class="am-content">
-                                            <div class="am-title">
-                                                <span class="me-auto">《深度學習的技術》讀書會</span>
-                                                <button class="btn btn-sm"><i class="fa-solid fa-pencil"></i></button>
-                                                <button class="btn btn-sm"><i class="fa-solid fa-eye"></i></button>
-                                                <button class="btn btn-sm"><i class="fa-solid fa-trash-can"></i></button>
+                                <div class="main-card">
+                                    <ul class="">
+                                        <li data-topic-tag="art">
+                                            <div class="topic-tag-icon tag-art">藝文</div>
+                                            <div class="card-content">
+                                                <a href="activity-detail.html">
+                                                    <div class="title">伊勢英子繪本原畫展-<生命的形式>紀錄電影放映</div>
+                                                    <div class="intro-content">灰灰基地美術館11月～2月展覽。 日本知名插畫家伊勢英子原畫展與紀錄電影 < 生...</div>
+                                                    <div class="dateTime-content"><i class="fa-solid fa-calendar-days"></i> 2021-03-05(五) 10:00 ~ 2021-04-20(二) 18:00 </div>
+                                                    <div class="location-content"><i class="fa-solid fa-location-dot"></i> 高雄市新興區民有街84,86號 ((近高雄捷運中央公園站))</div>                                
+                                                </a>
                                             </div>
-                                            <div class="am-info">
-                                                <div>
-                                                    <label for="">活動時間</label>
-                                                    <div class="date-info">2021/04/01 ~ 2021/04/30</div>
-                                                </div>
-                                                <div>
-                                                    <label for="">報名人數</label>
-                                                    <div class="peopleNumber-info">
-                                                        <span class="joined-number">1</span>/10
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>   
                             </div>
                             <div class="tab-pane fade" id="initiate-started" role="tabpanel" aria-labelledby="initiate-started-tab" tabindex="0">
-                                <ul class="am-list">
-                                    <li class="am-item">
-                                        <div class="am-content">
-                                            <div class="am-title">
-                                                <span class="me-auto">《深度學習的技術》讀書會</span>
-                                                <button class="btn btn-sm"><i class="fa-solid fa-pencil"></i></button>
-                                                <button class="btn btn-sm"><i class="fa-solid fa-eye"></i></button>
+                                <div class="main-card">
+                                    <ul class="">
+                                        <li data-topic-tag="language">
+                                            <div class="topic-tag-icon tag-language">語言</div>
+                                            <div class="card-content">
+                                                <a href="">
+                                                    <div class="title">英文口說讀書會</div>
+                                                    <div class="intro-content">全程英文，無需刻意準備，不拘束，輕鬆進行。第一小時閒聊；第二小時採主題進行...</div>
+                                                    <div class="dateTime-content"><i class="fa-solid fa-calendar-days"></i> 2021-03-05(五)  ~ 2021-04-20(二) </div>
+                                                    <div class="location-content"><i class="fa-solid fa-location-dot"></i> 中壢區，光南附近的摩斯漢堡。</div>                                
+                                                </a>
                                             </div>
-                                            <div class="am-info">
-                                                <div>
-                                                    <label for="">活動時間</label>
-                                                    <div class="date-info">2021/04/01 ~ 2021/04/30</div>
-                                                </div>
-                                                <div>
-                                                    <label for="">報名人數</label>
-                                                    <div class="peopleNumber-info">
-                                                        <span class="joined-number">1</span>/10
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div> 
                             </div>
                             <div class="tab-pane fade" id="initiate-over" role="tabpanel" aria-labelledby="initiate-over-tab" tabindex="0">
-                                <ul class="am-list">
-                                    <li class="am-item">
-                                        <div class="am-content">
-                                            <div class="am-title">
-                                                <span class="me-auto">《深度學習的技術》讀書會</span>
-                                                <button class="btn btn-sm"><i class="fa-solid fa-eye"></i></button>
+                                <div class="main-card">
+                                    <ul class="">
+                                        <li data-topic-tag="book">
+                                            <div class="topic-tag-icon tag-book">書籍</div>
+                                            <div class="card-content">
+                                                <a href="">
+                                                    <div class="title">《深度學習的技術》讀書會</div>
+                                                    <div class="intro-content">我們讀書會已成立一年囉，運作良好，成員們也都很好相處，這是去年 2017 Reading…</div>
+                                                    <div class="dateTime-content"><i class="fa-solid fa-calendar-days"></i> 2021/04/30(五) 19:30 </div>
+                                                    <div class="location-content"><i class="fa-solid fa-location-dot"></i> 伯朗南京一店（台北市中山區南京東路二段218號，建國南京交叉路口）</div>                                
+                                                </a>
                                             </div>
-                                            <div class="am-info">
-                                                <div>
-                                                    <label for="">活動時間</label>
-                                                    <div class="date-info">2021/04/01 ~ 2021/04/30</div>
-                                                </div>
-                                                <div>
-                                                    <label for="">報名人數</label>
-                                                    <div class="peopleNumber-info">
-                                                        <span class="joined-number">1</span>/10
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div> 
                             </div>
                         </div>
                     </div>
