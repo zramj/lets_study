@@ -35,6 +35,11 @@
     <script src="/node_modules/jquery-filepond/filepond.jquery.js"></script>
     <script type="module" src="/src/js/fileupload.js"></script>
 
+    <!-- JS Date Picker (flatpickr) -->
+    <link rel="stylesheet" href="/node_modules/flatpickr/dist/flatpickr.min.css">
+    <script src="/node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script type="module" src="/src/js/datepicker.js"></script>
+
 
     <link rel="stylesheet" href="/src/css/main.css">
     
@@ -92,31 +97,37 @@
                 </div>
                 <div class="tab-content am-container col-md-9" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab" tabindex="0">
-                        <form action="" id="accountForm">
-                            <div class="mb-3">
-                                <label for="signUpEmailInput" class="form-label">帳號</label>
-                                <input type="email" class="form-control" id="signUpEmailInput" placeholder="" readonly disabled value="mmmmmmm@gmail.com">
-                            </div>
-                            <div class="mb-3">
-                                <label for="nickNameInput" class="form-label">暱稱</label>
-                                <input type="text" class="form-control" id="nickNameInput" placeholder="" aria-labelledby="nickNameHelpBlock" required>
-                                <div id="nickNameHelpBlock" class="form-text">
-                                    這是您在 Lets Study 的暱稱，將公開給其他朋友認識您。
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="uploadImg-wrap">
-                                    <div class="uploadImg-text">
-                                        <i class="fa-solid fa-camera"></i>
-                                        <div>上傳個人照片</div>                             
+                        <form action="" id="accountForm" class="account-form">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="mb-3">
+                                        <label for="signUpEmailInput" class="form-label">帳號</label>
+                                        <input type="email" class="form-control" id="signUpEmailInput" placeholder="" readonly disabled value="mmmmmmm@gmail.com">
                                     </div>
-                                    <!-- <input class="form-control form-control-sm" id="formFileSm" type="file"> -->
-                                    <!--TODO: 上傳圖片預覽圖的效果 -->
-                                    <input type="file" 
-                                            class="filepond"
-                                            name="filepond" 
-                                            data-allow-reorder="true"
-                                            data-max-file-size="3MB">
+                                    <div class="mb-3">
+                                        <label for="nickNameInput" class="form-label">暱稱</label>
+                                        <input type="text" class="form-control" id="nickNameInput" placeholder="" aria-labelledby="nickNameHelpBlock" required>
+                                        <div id="nickNameHelpBlock" class="form-text">
+                                            這是您在 Lets Study 的暱稱，將公開給其他朋友認識您。
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="mb-3">
+                                        <div class="uploadImg-wrap personal-img">
+                                            <div class="uploadImg-text">
+                                                <i class="fa-solid fa-camera"></i>
+                                                <div>上傳個人照片</div>                             
+                                            </div>
+                                            <!-- <input class="form-control form-control-sm" id="formFileSm" type="file"> -->
+                                            <!--TODO: 上傳圖片預覽圖的效果 -->
+                                            <input type="file" 
+                                                    class="filepond"
+                                                    name="filepond" 
+                                                    data-allow-reorder="true"
+                                                    data-max-file-size="3MB">
+                                        </div>
+                                    </div>                                       
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -127,8 +138,45 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="nickNameInput" class="form-label">電話</label>
-                                <input type="text" class="form-control" id="nickNameInput" placeholder="" aria-labelledby="nickNameHelpBlock" required>
+                                <label for="phoneNumInput" class="form-label">電話</label>
+                                <input type="text" class="form-control" id="phoneNumInput" placeholder="" aria-labelledby="phoneNumHelpBlock" required>
+                                <div id="phoneNumHelpBlock" class="form-text">
+                                    請輸入您的聯絡電話。
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phoneNumInput" class="form-label">性別</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genderOption" id="maleOption" value="male">
+                                        <label class="form-check-label" for="maleOption">男</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genderOption" id="femaleOption" value="female">
+                                        <label class="form-check-label" for="femaleOption">女</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="birthdayInput" class="form-label">生日</label>
+                                <input type="text" name="" id="birthdayInput" class="form-control anotherSelector" >                                
+                            </div>
+                            <div class="mb-3">
+                                <label for="birthdayInput" class="form-label">隱私權設定</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="showEmail" value="1">
+                                        <label class="form-check-label" for="showEmail">顯示Email</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="showJoinedEvents" value="2">
+                                        <label class="form-check-label" for="showJoinedEvents">顯示參加的活動</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="showEvensFormMe" value="3">
+                                        <label class="form-check-label" for="showEvensFormMe">顯示主揪的活動</label>
+                                    </div>
+                                </div>                              
                             </div>
                             <div class="text-center mb-3">
                                 <button type="submit" class="btn btn-default">儲存修改</button>
