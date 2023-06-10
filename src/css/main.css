@@ -507,6 +507,9 @@ footer {
       font-size: 1.2em;
       color: #1E252B;
       margin-right: 2px; }
+  .am-content .fa-address-book {
+    color: #FFEB3B;
+    font-size: 1.2rem; }
 
 .memberInfo-wrap {
   justify-content: center;
